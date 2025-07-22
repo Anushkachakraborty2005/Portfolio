@@ -115,7 +115,7 @@ Feel free to reach out for:
 
   ---
 
-## ## 📧 Contact
+ ## 📧 Contact
 
 **Anushka Chakraborty**  
 🔖 [LinkedIn](https://www.linkedin.com/in/anushka-chakraborty-006881311/)  
