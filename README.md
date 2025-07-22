@@ -5,7 +5,7 @@ This platform showcases my **skills**, **projects**, and **passion** for web dev
 ## 🌐 Live Demo
 
 You can view the live version of this portfolio website here:  
-🔗 [Visit My Portfolio](https://resplendent-pony-dd2f65.netlify.app/)
+⏳ [Visit My Portfolio](https://resplendent-pony-dd2f65.netlify.app/)
 
 
 --- 
@@ -18,7 +18,7 @@ Engaging introduction with a typing animation that highlights my core skills.
 🧠 **Interactive Skill Section**  
 Clickable skill cards reveal detailed insights into my technical expertise.
 
-💡 **Highlighted Content**  
+🎗 **Highlighted Content**  
 Key terms and technologies glow for improved readability and emphasis.
 
 📱 **Responsive Design**  
