@@ -2,6 +2,13 @@
 
 👋 Welcome to my personal portfolio website!  
 This platform showcases my **skills**, **projects**, and **passion** for web development and technology. 🚀
+## 🌐 Live Demo
+
+You can view the live version of this portfolio website here:  
+🔗 [Visit My Portfolio](https://resplendent-pony-dd2f65.netlify.app/)
+
+
+--- 
 
 ## 💡 Features
 
@@ -66,8 +73,11 @@ An AI-driven mentorship platform offering personalized tech career guidance.
 **🛠️ Tech Stack:** `Python`, `Streamlit`, `Google Gemini API`, `Custom Search API`, `YouTube Data API`, `ReportLab`, `Aiohttp`  
 **🔗 Live Demo:** [TechMentor](https://tech-mentor-app-k8szevckmur245i22lc4b2.streamlit.app/)
 
----
 
+
+
+
+---
 ## 📬 Get in Touch
 
 Feel free to reach out for:
@@ -75,17 +85,10 @@ Feel free to reach out for:
 - 💼 Career opportunities  
 - 💌 General inquiries
 
----
-## 🌐 Live Demo
+  ---
 
-You can view the live version of this portfolio website here:  
-🔗 [Visit My Portfolio](https://resplendent-pony-dd2f65.netlify.app/)
-
----
-
-## 📧 Contact
+## ## 📧 Contact
 
 **Anushka Chakraborty**  
- 🔖[LinkedIn Profile](https://www.linkedin.com/in/anushka-chakraborty-006881311/)  
-📧 Email: [anushkachakbotty@gmail.com](mailto:anushkachakbotty@gmail.com)
-
+🔖 [LinkedIn](https://www.linkedin.com/in/anushka-chakraborty-006881311/)  
+📧 [Email](mailto:anushkachakbotty@gmail.com)
