@@ -1,7 +1,8 @@
 # ✨ Anushka Chakraborty - Personal Portfolio ✨
 
-Welcome to my personal portfolio website!🤍
-This platform showcases my **skills**, **projects**, and **passion for web development and technology**👩🏻‍💻
+👋 Welcome to my personal portfolio website!  
+This platform showcases my **skills**, **projects**, and **passion** for web development and technology. 🚀
+
 ## 💡 Features
 
 🎯 **Dynamic Hero Section**  
@@ -75,4 +76,16 @@ Feel free to reach out for:
 - 💌 General inquiries
 
 ---
+## 🌐 Live Demo
+
+You can view the live version of this portfolio website here:  
+🔗 [Visit My Portfolio](https://resplendent-pony-dd2f65.netlify.app/)
+
+---
+
+## 📧 Contact
+
+**Anushka Chakraborty**  
+ 🔖[LinkedIn Profile](https://www.linkedin.com/in/anushka-chakraborty-006881311/)  
+📧 Email: [anushkachakbotty@gmail.com](mailto:anushkachakbotty@gmail.com)
 
