@@ -42,7 +42,7 @@ Here's a breakdown of my technical skills:
   Proficient in `HTML5`, `CSS3`, and modern `JavaScript` for building responsive UIs.  
   Familiar with `React` and `Tailwind CSS` for component-based development and clean design.
 
-- 🗄️ **SQL**  
+- ♟ **SQL**  
   Strong grasp of `SQL` for querying and managing relational databases.  
   Experience with `MySQL` for structured data handling and storage.
 
@@ -55,10 +55,10 @@ Here's a breakdown of my technical skills:
 - ⚙️ **C Programming**  
   Solid understanding of core programming and `DSA` using `C` for efficient, low-level solutions.
 
-- 🛢️ **Database Management**  
+- ⚖ **Database Management**  
   Skilled in designing and optimizing `relational databases`, with awareness of security and best practices.
 
-- 📚 **Basic DSA**  
+- 🧮 **Basic DSA**  
   Strong fundamentals in `Data Structures & Algorithms` for efficient coding and problem-solving.
 
 ---
