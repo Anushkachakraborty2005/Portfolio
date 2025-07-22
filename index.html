@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anushka Chakraborty - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Define custom CSS variables for colors */
+        :root {
+            --primary-text-color: #E0E0FF; /* Very light blue-purple for main text */
+            --secondary-text-color: #C0C0E0; /* Lighter desaturated blue-purple for secondary text */
+            --accent-color-1: #7B68EE; /* Medium purple/blue for highlights/links */
+            --accent-color-2: #A060F0; /* Vibrant purple for other headings/names */
+        }
+
+        /* Apply Poppins font globally and set a default dark background/light text color */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0F0F0F; /* Very dark base background */
+            color: var(--primary-text-color); /* Apply primary text color globally */
+            font-size: 0.95rem; /* Slightly reduced base font size */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Custom scroll behavior for smooth navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Full-screen background container with the new hexagonal pattern */
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Send it to the back */
+            background-color: #1A0033; /* Deep purple base */
+            background-image:
+                /* Glowing points (purple/pink/blue) */
+                radial-gradient(circle at 20% 30%, rgba(255, 0, 255, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(0, 255, 255, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 50% 10%, rgba(128, 0, 128, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 10% 90%, rgba(0, 128, 128, 0.2) 0%, transparent 50%),
+
+                /* Hexagonal grid with subtle glow */
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0L100 25L100 75L50 100L0 75L0 25Z' fill='none' stroke='%23400080' stroke-width='1' opacity='0.3'/%3E%3C/svg%3E"),
+
+                /* Binary code pattern */
+                url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='20' font-family='monospace' font-size='16' fill='%236000C0' opacity='0.15'%3E01010101%3C/text%3E%3Ctext x='100' y='120' font-family='monospace' font-size='16' fill='%236000C0' opacity='0.15'%3E10101010%3C/text%3E%3Ctext x='50' y='70' font-family='monospace' font-size='16' fill='%236000C0' opacity='0.15'%3E00110011%3C/text%3E%3Ctext x='150' y='170' font-family='monospace' font-size='16' fill='%236000C0' opacity='0.15'%3E11001100%3C/text%3E%3C/svg%3E"),
+
+                /* Overall subtle gradient for depth (bottom layer) */
+                linear-gradient(to bottom, #1A0033, #0A001A); /* Dark purple to even darker purple/black */
+
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat, no-repeat;
+            background-size: 80% 80%, 80% 80%, 80% 80%, 80% 80%, auto, auto, cover;
+            background-position: var(--glow1-x) var(--glow1-y), var(--glow2-x) var(--glow2-y), var(--glow3-x) var(--glow3-y), var(--glow4-x) var(--glow4-y), top left, top left, center;
+            animation: moveGlow 20s infinite alternate ease-in-out; /* Slower animation for subtlety */
+            /* Custom properties for dynamic glow positions */
+            --glow1-x: 20%; --glow1-y: 30%;
+            --glow2-x: 80%; --glow2-y: 70%;
+            --glow3-x: 50%; --glow3-y: 10%;
+            --glow4-x: 10%; --glow4-y: 90%;
+        }
+
+        @keyframes moveGlow {
+            0% {
+                --glow1-x: 20%; --glow1-y: 30%;
+                --glow2-x: 80%; --glow2-y: 70%;
+                --glow3-x: 50%; --glow3-y: 10%;
+                --glow4-x: 10%; --glow4-y: 90%;
+            }
+            25% {
+                --glow1-x: 25%; --glow1-y: 40%;
+                --glow2-x: 75%; --glow2-y: 60%;
+                --glow3-x: 55%; --glow3-y: 20%;
+                --glow4-x: 15%; --glow4-y: 80%;
+            }
+            50% {
+                --glow1-x: 30%; --glow1-y: 50%;
+                --glow2-x: 70%; --glow2-y: 50%;
+                --glow3-x: 60%; --glow3-y: 30%;
+                --glow4-x: 20%; --glow4-y: 70%;
+            }
+            75% {
+                --glow1-x: 25%; --glow1-y: 40%;
+                --glow2-x: 75%; --glow2-y: 60%;
+                --glow3-x: 55%; --glow3-y: 20%;
+                --glow4-x: 15%; --glow4-y: 80%;
+            }
+            100% {
+                --glow1-x: 20%; --glow1-y: 30%;
+                --glow2-x: 80%; --glow2-y: 70%;
+                --glow3-x: 50%; --glow3-y: 10%;
+                --glow4-x: 10%; --glow4-y: 90%;
+            }
+        }
+
+        /* Specific styling for the 'portfolio' text in the header */
+        .header-portfolio-text {
+            color: var(--accent-color-1); /* Use accent color */
+        }
+
+        /* Specific styling for the main name in the hero section */
+        .hero-name-text {
+            color: #FF69B4; /* Hot Pink for eye-catching effect */
+        }
+
+        /* Specific styling for the "good in" skill text */
+        .hero-skill-highlight {
+            color: var(--accent-color-1); /* Use accent color */
+        }
+
+        /* Custom button styling to match the reference */
+        .custom-button {
+            background-color: #8e2de2; /* Darker purple */
+            color: white;
+            padding: 0.75rem 2rem; /* py-3 px-8 */
+            border-radius: 9999px; /* rounded-full */
+            font-weight: 600; /* font-semibold */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 14px rgba(142, 45, 226, 0.4); /* Subtle glow shadow */
+        }
+
+        .custom-button:hover {
+            background-color: var(--accent-color-1); /* Lighter purple on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        /* Custom styling for section backgrounds and text to match the dark theme */
+        /* These sections will now have a slightly opaque dark background to stand out */
+        .section-bg-dark {
+            background-color: rgba(15, 0, 30, 0.7); /* Dark purple with transparency */
+            color: var(--primary-text-color);
+            border-radius: 0.75rem; /* rounded-xl */
+            margin-bottom: 2rem; /* Add some space between sections */
+            padding: 2rem; /* Add padding inside sections */
+        }
+
+        .section-bg-darker {
+            background-color: rgba(10, 0, 20, 0.7); /* Even darker purple with transparency */
+            color: var(--primary-text-color);
+            border-radius: 0.75rem; /* rounded-xl */
+            margin-bottom: 2rem; /* Add some space between sections */
+            padding: 2rem; /* Add padding inside sections */
+        }
+
+        .section-heading-color {
+            color: var(--accent-color-2); /* Use accent color */
+        }
+
+        /* Styling for individual skill "toggling buttons" */
+        .skill-card {
+            background-color: #1A1A1A; /* Solid dark background, matching reference card style */
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 1.5rem; /* p-6 */
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer; /* Indicate clickability */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Adjusted transition */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle light border */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+            display: flex; /* Use flexbox for text alignment */
+            align-items: center; /* Vertically align items */
+        }
+
+        /* Removed ::before pseudo-element for glowing left border */
+        .skill-card:hover {
+            background-color: #2A2A2A; /* Slightly lighter on hover */
+            transform: translateY(-3px); /* Subtle lift effect */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .skill-card.active { /* Optional: for a clicked/active state */
+            background-color: #2A2A2A;
+            border-color: var(--accent-color-1); /* Accent color border when active */
+            box-shadow: 0 0 20px rgba(123, 104, 238, 0.6); /* More prominent glow matching accent */
+        }
+
+        /* Styling for the hidden skill description */
+        .skill-description {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+            opacity: 0;
+            margin-top: 0.5rem; /* Space between title and description */
+            font-size: 0.85rem; /* Smaller font for description */
+            color: var(--secondary-text-color);
+            width: 100%; /* Ensure description takes full width */
+            padding-left: 0; /* No padding-left needed as no icons */
+        }
+
+        .skill-card.active .skill-description {
+            max-height: 100px; /* Adjust as needed based on content length */
+            opacity: 1;
+        }
+
+        .skill-card p {
+            font-size: 1.15rem; /* Slightly reduced font size for skill cards */
+            font-weight: 500; /* font-medium */
+            color: var(--primary-text-color); /* Use primary text color */
+            margin-left: 0; /* No margin-left needed as no icons */
+            /* Removed transition for color to make it immediate */
+        }
+
+        /* Change font color on hover/active for skill card text */
+        .skill-card:hover p {
+            color: white; /* Change to white on hover */
+        }
+
+        .skill-card.active p {
+            color: #00FFFF; /* Vibrant Cyan/Aqua */
+            font-weight: 600; /* Make it slightly bolder */
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.7), 0 0 15px rgba(0, 255, 255, 0.4); /* Glowing effect */
+        }
+
+
+        /* Styling for the About section's text box */
+        .about-text-box {
+            background-color: rgba(26, 26, 26, 0.6); /* Dark background with transparency */
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 2.5rem; /* Increased padding for more space */
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent; /* Base transparent border */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+            max-width: 48rem; /* max-w-2xl equivalent for about text box */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Removed ::before pseudo-element for glowing left border */
+        .about-text-box p {
+            font-size: 1.05rem; /* Adjusted font size for about text */
+        }
+
+        /* Styling for highlighted text */
+        .highlight-text {
+            color: #00FFFF; /* Vibrant Cyan/Aqua */
+            font-weight: 600; /* Make it slightly bolder */
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.7), 0 0 15px rgba(0, 255, 255, 0.4); /* Glowing effect */
+        }
+
+        /* Project card specific styling */
+        .project-card {
+            background-color: #1A1A1A; /* Solid dark background, matching reference card style */
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 1.5rem; /* p-6 */
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Adjusted transition */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle light border */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card:hover {
+            background-color: #2A2A2A;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Removed ::before pseudo-element for glowing left border */
+        .project-card p {
+            font-size: 0.9rem; /* Adjusted font size for project descriptions */
+        }
+
+        /* Contact Form Specific Styles */
+        .contact-form-container {
+            background-color: #1A1A1A; /* Dark background for the form container */
+            border-radius: 0.75rem;
+            padding: 2.5rem;
+            max-width: 32rem; /* max-w-md equivalent for the form */
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 1px solid #4A00E0; /* Glowing border */
+            position: relative; /* For pseudo-element glow */
+            overflow: hidden; /* To contain pseudo-element glow */
+        }
+
+        /* Removed the ::before pseudo-element and its animation for the contact form */
+        /* as the dynamic background is now applied globally to the body. */
+
+        .contact-form-container input[type="text"],
+        .contact-form-container input[type="email"],
+        .contact-form-container textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-top: 0.25rem;
+            margin-bottom: 1rem;
+            background-color: #2A2A2A; /* Darker input background */
+            border: 1px solid #4A00E0; /* Blue-purple border */
+            border-radius: 0.375rem;
+            color: var(--primary-text-color);
+            font-size: 0.9rem;
+            outline: none; /* Remove default outline */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form-container input[type="text"]:focus,
+        .contact-form-container input[type="email"]:focus,
+        .contact-form-container textarea:focus {
+            border-color: #FF69B4; /* Hot Pink on focus */
+            box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.3); /* Soft glow on focus */
+        }
+
+        .contact-form-container label {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--primary-text-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .send-message-button {
+            background-color: #00FFFF; /* Cyan/Aqua color */
+            color: #0F0F0F; /* Dark text for contrast */
+            padding: 0.75rem 2rem;
+            border-radius: 9999px; /* rounded-full */
+            font-weight: 700; /* font-bold */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0, 255, 255, 0.4); /* Cyan glow */
+            width: 100%; /* Full width button */
+            cursor: pointer;
+        }
+
+        .send-message-button:hover {
+            background-color: #00E0E0; /* Slightly darker cyan on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Full-screen background container -->
+    <div class="background-container"></div>
+
+    <div id="root" class="min-h-screen flex flex-col relative z-0">
+        <!-- Navigation -->
+        <header class="bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-lg shadow-sm py-4 px-6 fixed w-full z-20">
+            <nav class="container mx-auto flex justify-between items-center">
+                <a href="#home" class="text-2xl font-bold header-portfolio-text">portfolio</a>
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="text-[var(--primary-text-color)] hover:text-purple-400 transition duration-300">home</a></li>
+                    <li><a href="#about" class="text-[var(--primary-text-color)] hover:text-purple-400 transition duration-300">about</a></li>
+                    <li><a href="#skills" class="text-[var(--primary-text-color)] hover:text-purple-400 transition duration-300">skill</a></li>
+                    <li><a href="#projects" class="text-[var(--primary-text-color)] hover:text-purple-400 transition duration-300">projects</a></li>
+                    <!-- Removed Certifications link -->
+                    <li><a href="#contact" class="text-[var(--primary-text-color)] hover:text-purple-400 transition duration-300">my contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="flex-grow flex items-center justify-center text-white py-20 pt-32 relative z-10 min-h-screen">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center text-center md:text-left">
+                <!-- Left Content -->
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <p class="text-xl md:text-2xl font-medium mb-2">hello i am</p>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 leading-tight hero-name-text">Anushka Chakraborty</h1>
+                    <p class="text-2xl md:text-3xl font-semibold mb-6">and I am good in <span id="typing-skill" class="hero-skill-highlight"></span></p>
+                    <p class="text-lg md:text-xl mb-8 max-w-lg text-[var(--primary-text-color)]">
+                        I'm passionate about web development and love building modern, responsive websites. Always exploring new technologies and turning ideas into interactive web experiences.
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-6 mb-8">
+                        <a href="https://www.linkedin.com/in/anushka-chakraborty-006881311/" target="_blank" class="text-[var(--primary-text-color)] hover:text-purple-400 transition duration-300">
+                            <!-- LinkedIn Icon SVG -->
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="https://github.com/Anushkachakraborty2005" target="_blank" class="text-[var(--primary-text-color)] hover:text-purple-400 transition duration-300">
+                            <!-- GitHub Icon SVG -->
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.47.087.68-.217.68-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.004.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.392-1.988 1.03-2.69-.104-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.098 2.65.637.702 1.03 1.594 1.03 2.69 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.209.576.685.479C21.133 20.217 24 16.46 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd" /></svg>
+                        </a>
+                    </div>
+                    <a href="#about" class="custom-button">more about me</a>
+                </div>
+
+                <!-- Right Content: Your Photo -->
+                <div class="md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
+                    <!-- This is the <img> tag you are looking for -->
+                    <img src="profile_photo.jpg" alt="Anushka Chakraborty" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-xl border-4 border-purple-500 transform hover:scale-105 transition duration-300"
+                         onerror="this.onerror=null; this.src='https://placehold.co/320x320/cccccc/333333?text=AC'; this.alt='Anushka Chakraborty Placeholder';">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 section-bg-dark">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold section-heading-color mb-8">This is about page</h2>
+                <div class="about-text-box text-lg text-[var(--primary-text-color)] leading-relaxed">
+                    <p class="text-lg md:text-xl">
+                        I am a passionate <span class="highlight-text">web developer</span> with a focus on creating engaging and user-friendly websites. My goal is to build solutions that meet real user needs.
+                    </p>
+                    <p class="text-lg md:text-xl mt-4">
+                        I have hands-on experience in <span class="highlight-text">HTML</span>, <span class="highlight-text">CSS</span>, <span class="highlight-text">JavaScript</span>, <span class="highlight-text">SQL</span>, <span class="highlight-text">C</span>, <span class="highlight-text">Python</span>, and <span class="highlight-text">database management</span>. I continuously strive to improve my skills and keep up with industry trends.
+                    </p>
+                    <p class="text-lg md:text-xl mt-4">
+                        Outside of coding, I enjoy collaborating with teams and transforming ideas into real-world applications.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skill Section -->
+        <section id="skills" class="py-20 section-bg-darker">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold section-heading-color mb-8">This is skills page</h2>
+                <div class="flex flex-col items-center gap-6 max-w-2xl mx-auto">
+                    <!-- Skill 1: Web technologies -->
+                    <div class="skill-card w-full">
+                        <p>Web technologies</p>
+                        <div class="skill-description">
+                            Proficient in HTML5, CSS3, and modern JavaScript for building responsive and interactive web interfaces. Experienced with frameworks like React and styling with Tailwind CSS.
+                        </div>
+                    </div>
+                    <!-- Skill 2: SQL -->
+                    <div class="skill-card w-full">
+                        <p>SQL</p>
+                        <div class="skill-description">
+                            Strong understanding of SQL for database querying, manipulation, and design. Experienced with MySQL for efficient data management.
+                        </div>
+                    </div>
+                    <!-- Skill 3: Python -->
+                    <div class="skill-card w-full">
+                        <p>Python</p>
+                        <div class="skill-description">
+                            Extensive experience in Python for web development (Streamlit), data manipulation (Pandas, NumPy), and machine learning (scikit-learn).
+                        </div>
+                    </div>
+                    <!-- Skill 4: C -->
+                    <div class="skill-card w-full">
+                        <p>C</p>
+                        <div class="skill-description">
+                            Solid foundation in C programming, including data structures and algorithms, for efficient and low-level programming.
+                        </div>
+                    </div>
+                    <!-- Skill 5: Database Management -->
+                    <div class="skill-card w-full">
+                        <p>Database Management</p>
+                        <div class="skill-description">
+                            Skilled in designing, implementing, and managing relational databases. Familiar with database optimization and security best practices.
+                        </div>
+                    </div>
+                    <!-- Skill 6: Basic DSA -->
+                    <div class="skill-card w-full">
+                        <p>Basic DSA</p>
+                        <div class="skill-description">
+                            Fundamental knowledge of Data Structures and Algorithms, enabling efficient problem-solving and optimized code solutions.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 section-bg-dark">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold section-heading-color mb-8">My Projects</h2>
+                <!-- Adjusted grid for 3 columns on medium and large screens -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
+                    <!-- Project 1: ThreatFilter -->
+                    <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-left project-card">
+                        <h3 class="text-2xl font-semibold text-purple-400 mb-2">ThreatFilter: Real-time Spam URL Detection</h3>
+                        <ul class="list-disc list-inside text-[var(--primary-text-color)] mb-4 text-sm space-y-1">
+                            <li>Developed a robust web application for <span class="highlight-text">real-time identification of potentially malicious and spam URLs</span>.</li>
+                            <li>Integrated the <span class="highlight-text">VirusTotal API</span> to leverage extensive threat intelligence for accurate URL security assessments.</li>
+                            <li>Implemented <span class="highlight-text">web scraping functionality</span> using <span class="highlight-text">BeautifulSoup4</span> and <span class="highlight-text">Requests</span> to provide relevant content descriptions for verified safe URLs.</li>
+                            <li>Designed and built a <span class="highlight-text">user-friendly interface with Streamlit</span> to ensure intuitive interaction and clear presentation of security findings.</li>
+                        </ul>
+                        <p class="text-sm font-medium text-[var(--secondary-text-color)] mb-4">
+                            <strong>Tech Stack:</strong> <span class="highlight-text">Python</span>, <span class="highlight-text">Streamlit</span>, <span class="highlight-text">VirusTotal API</span>, <span class="highlight-text">Requests</span>, <span class="highlight-text">BeautifulSoup4</span>
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/Anushkachakraborty2005/ThreatFilter-URL-Detector" target="_blank" class="text-purple-400 hover:text-purple-200 font-medium flex items-center">
+                                <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.47.087.68-.217.68-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.004.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.392-1.988 1.03-2.69-.104-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.098 2.65.637.702 1.03 1.594 1.03 2.69 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.209.576.685.479C21.133 20.217 24 16.46 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd" /></svg>
+                                GitHub
+                            </a>
+                            <a href="https://threatfilter-url-detector-ccqbgqkascrccmkh7ksssc.streamlit.app/" target="_blank" class="text-purple-400 hover:text-purple-200 font-medium flex items-center">
+                                <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                Live App
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: CampusManager -->
+                    <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-left project-card">
+                        <h3 class="text-2xl font-semibold text-purple-400 mb-2">CampusManager - Student CRUD System</h3>
+                        <ul class="list-disc list-inside text-[var(--primary-text-color)] mb-4 text-sm space-y-1">
+                            <li>Developed a <span class="highlight-text">CRUD-based academic record system</span> with <span class="highlight-text">Tkinter GUI</span> and <span class="highlight-text">MySQL backend</span>.</li>
+                            <li>Enabled <span class="highlight-text">data persistence</span> and efficient record handling for non-technical users.</li>
+                            <li>Leveraged <span class="highlight-text">Git for version control</span> and streamlined team coordination throughout the development lifecycle.</li>
+                        </ul>
+                        <p class="text-sm font-medium text-[var(--secondary-text-color)] mb-4">
+                            <strong>Tech Stack:</strong> <span class="highlight-text">Python</span>, <span class="highlight-text">MySQL</span>, <span class="highlight-text">Tkinter</span>
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/Anushkachakraborty2005/CampusManager-Student-CRUD-System" target="_blank" class="text-purple-400 hover:text-purple-200 font-medium flex items-center">
+                                <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.47.087.68-.217.68-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.004.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.392-1.988 1.03-2.69-.104-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.098 2.65.637.702 1.03 1.594 1.03 2.69 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.209.576.685.479C21.133 20.217 24 16.46 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd" /></svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- New Project: TechMentor -->
+                    <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-left project-card">
+                        <h3 class="text-2xl font-semibold text-purple-400 mb-2">TechMentor: AI-Powered Tech Help Desk for Students</h3>
+                        <ul class="list-disc list-inside text-[var(--primary-text-color)] mb-4 text-sm space-y-1">
+                            <li>Developed an <span class="highlight-text">AI-powered career guidance application</span> designed to provide personalized mentorship and career path recommendations.</li>
+                            <li>Utilized <span class="highlight-text">Google's Gemini API</span> for advanced natural language processing and content generation, offering tailored advice based on user input.</li>
+                            <li>Built a <span class="highlight-text">responsive and intuitive user interface with Streamlit</span>, ensuring an engaging and accessible experience for users seeking career insights.</li>
+                            <li>Implemented features for <span class="highlight-text">interactive Q&A sessions</span>, allowing users to delve deeper into specific career aspects and receive instant, relevant guidance.</li>
+                        </ul>
+                        <p class="text-sm font-medium text-[var(--secondary-text-color)] mb-4">
+                            <strong>Tech Stack:</strong> <span class="highlight-text">Python</span>, <span class="highlight-text">Streamlit</span>, <span class="highlight-text">Google Gemini API</span>, <span class="highlight-text">Custom Search API</span>, <span class="highlight-text">YouTube Data API</span>, <span class="highlight-text">ReportLab</span>, <span class="highlight-text">Aiohttp</span>
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/Anushkachakraborty2005/tech-mentor-app" target="_blank" class="text-purple-400 hover:text-purple-200 font-medium flex items-center">
+                                <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.47.087.68-.217.68-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.004.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.392-1.988 1.03-2.69-.104-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.098 2.65.637.702 1.03 1.594 1.03 2.69 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.209.576.685.479C21.133 20.217 24 16.46 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd" /></svg>
+                                GitHub
+                            </a>
+                            <a href="https://tech-mentor-app-k8szevckmur245i22lc4b2.streamlit.app/" target="_blank" class="text-purple-400 hover:text-purple-200 font-medium flex items-center">
+                                <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                Live App
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 section-bg-darker">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold section-heading-color mb-8">This is contact page</h2>
+                <div class="contact-form-container">
+                    <form>
+                        <div class="mb-4 text-left">
+                            <label for="name" class="block text-[var(--primary-text-color)] text-sm font-bold mb-2">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                        <div class="mb-4 text-left">
+                            <label for="email" class="block text-[var(--primary-text-color)] text-sm font-bold mb-2">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                        <div class="mb-6 text-left">
+                            <label for="message" class="block text-[var(--primary-text-color)] text-sm font-bold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button type="submit" class="send-message-button">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-[var(--secondary-text-color)] py-8 text-center">
+            <div class="container mx-auto px-4">
+                <p>&copy; 2025 Anushka Chakraborty. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript for Skill Toggling Buttons (Individual Cards)
+        document.addEventListener('DOMContentLoaded', () => {
+            const skillCards = document.querySelectorAll('.skill-card');
+
+            skillCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    // Toggle 'active' class on click
+                    card.classList.toggle('active');
+
+                    // Find the skill description within this card and toggle its display
+                    const description = card.querySelector('.skill-description');
+                    if (description) {
+                        if (card.classList.contains('active')) {
+                            description.style.maxHeight = description.scrollHeight + "px"; // Expand to content height
+                            description.style.opacity = 1;
+                        } else {
+                            description.style.maxHeight = "0";
+                            description.style.opacity = 0;
+                        }
+                    }
+
+                    // Optional: If you want only one card to be active at a time
+                    skillCards.forEach(otherCard => {
+                        if (otherCard !== card && otherCard.classList.contains('active')) {
+                            otherCard.classList.remove('active');
+                            const otherDescription = otherCard.querySelector('.skill-description');
+                            if (otherDescription) {
+                                otherDescription.style.maxHeight = "0";
+                                otherDescription.style.opacity = 0;
+                            }
+                        }
+                    });
+                });
+            });
+
+            // JavaScript for Dynamic Typing Skill in Hero Section
+            const typingSkillElement = document.getElementById('typing-skill');
+            const skills = ["Web Development", "Python", "SQL", "Database Management", "C", "DSA"]; // Add all relevant skills
+            let skillIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            const typingSpeed = 100; // milliseconds per character
+            const deletingSpeed = 50; // milliseconds per character
+            const pauseBeforeDelete = 1500; // milliseconds to pause before deleting
+            const pauseBeforeType = 500; // milliseconds to pause before typing next skill
+
+            function typeWriter() {
+                const currentSkill = skills[skillIndex];
+                if (isDeleting) {
+                    typingSkillElement.textContent = currentSkill.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typingSkillElement.textContent = currentSkill.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                let currentSpeed = isDeleting ? deletingSpeed : typingSpeed;
+
+                if (!isDeleting && charIndex === currentSkill.length) {
+                    currentSpeed = pauseBeforeDelete;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    skillIndex = (skillIndex + 1) % skills.length;
+                    currentSpeed = pauseBeforeType;
+                }
+
+                setTimeout(typeWriter, currentSpeed);
+            }
+
+            // Start the typing animation when the DOM is fully loaded
+            typeWriter();
+        });
+    </script>
+</body>
+</html>
