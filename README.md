@@ -2,7 +2,7 @@
 
 👋 Welcome to my personal portfolio website!  
 This platform showcases my **skills**, **projects**, and **passion** for web development and technology. 🚀
-## 🌐 Live Demo
+## 🎥 Live Demo
 
 You can view the live version of this portfolio website here:  
 ⏳ [Visit My Portfolio](https://resplendent-pony-dd2f65.netlify.app/)
