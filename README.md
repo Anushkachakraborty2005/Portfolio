@@ -30,7 +30,7 @@ Clean, dark-themed interface with smooth animations and a futuristic background.
 📁 **Project Showcase**  
 Dedicated section featuring projects with descriptions, tech stacks, GitHub links & live demos.
 
-📬 **Contact Form**  
+🗒 **Contact Form**  
 Simple and effective way to get in touch for collaborations or queries.
 
 ---
