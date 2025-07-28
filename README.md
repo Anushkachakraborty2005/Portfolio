@@ -5,9 +5,7 @@ This platform showcases my **skills**, **projects**, and **passion** for web dev
 ## 🎥 Live Demo
 
 You can view the live version of this portfolio website here:  
-⏳ [Visit My Portfolio](https://admirable-mandazi-8279ad.netlify.app/
-
-)
+⏳ [Visit My Portfolio](https://admirable-mandazi-8279ad.netlify.app/)
 
 
 --- 
