@@ -466,7 +466,31 @@
                 <h2 class="text-4xl font-bold section-heading-color mb-8">My Projects</h2>
                 <!-- Adjusted grid for 3 columns on medium and large screens -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
-                    <!-- Project 1: ThreatFilter -->
+                    <!-- New Project: TechMentor (now first) -->
+                    <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-left project-card">
+                        <h3 class="text-2xl font-semibold text-purple-400 mb-2">TechMentor: AI-Powered Tech Help Desk for Students</h3>
+                        <ul class="list-disc list-inside text-[var(--primary-text-color)] mb-4 text-sm space-y-1">
+                            <li>Developed an <span class="highlight-text">AI-powered career guidance application</span> designed to provide personalized mentorship and career path recommendations.</li>
+                            <li>Utilized <span class="highlight-text">Google's Gemini API</span> for advanced natural language processing and content generation, offering tailored advice based on user input.</li>
+                            <li>Built a <span class="highlight-text">responsive and intuitive user interface with Streamlit</span>, ensuring an engaging and accessible experience for users seeking career insights.</li>
+                            <li>Implemented features for <span class="highlight-text">interactive Q&A sessions</span>, allowing users to delve deeper into specific career aspects and receive instant, relevant guidance.</li>
+                        </ul>
+                        <p class="text-sm font-medium text-[var(--secondary-text-color)] mb-4">
+                            <strong>Tech Stack:</strong> <span class="highlight-text">Python</span>, <span class="highlight-text">Streamlit</span>, <span class="highlight-text">Google Gemini API</span>, <span class="highlight-text">Custom Search API</span>, <span class="highlight-text">YouTube Data API</span>, <span class="highlight-text">ReportLab</span>, <span class="highlight-text">Aiohttp</span>
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/Anushkachakraborty2005/TechMentor-App" target="_blank" class="text-purple-400 hover:text-purple-200 font-medium flex items-center">
+                                <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.47.087.68-.217.68-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.004.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.392-1.988 1.03-2.69-.104-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.098 2.65.637.702 1.03 1.594 1.03 2.69 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.209.576.685.479C21.133 20.217 24 16.46 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd" /></svg>
+                                GitHub
+                            </a>
+                            <a href="https://techmentor-app-9ibwtxjsepyxzpsv3skjp5.streamlit.app/" target="_blank" class="text-purple-400 hover:text-purple-200 font-medium flex items-center">
+                                <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                Live App
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 1: ThreatFilter (now second) -->
                     <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-left project-card">
                         <h3 class="text-2xl font-semibold text-purple-400 mb-2">ThreatFilter: Real-time Spam URL Detection</h3>
                         <ul class="list-disc list-inside text-[var(--primary-text-color)] mb-4 text-sm space-y-1">
@@ -490,7 +514,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 2: CampusManager -->
+                    <!-- Project 2: CampusManager (now third) -->
                     <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-left project-card">
                         <h3 class="text-2xl font-semibold text-purple-400 mb-2">CampusManager - Student CRUD System</h3>
                         <ul class="list-disc list-inside text-[var(--primary-text-color)] mb-4 text-sm space-y-1">
@@ -505,30 +529,6 @@
                             <a href="https://github.com/Anushkachakraborty2005/CampusManager-Student-CRUD-System" target="_blank" class="text-purple-400 hover:text-purple-200 font-medium flex items-center">
                                 <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.47.087.68-.217.68-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.004.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.392-1.988 1.03-2.69-.104-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.098 2.65.637.702 1.03 1.594 1.03 2.69 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.209.576.685.479C21.133 20.217 24 16.46 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd" /></svg>
                                 GitHub
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- New Project: TechMentor -->
-                    <div class="bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-left project-card">
-                        <h3 class="text-2xl font-semibold text-purple-400 mb-2">TechMentor: AI-Powered Tech Help Desk for Students</h3>
-                        <ul class="list-disc list-inside text-[var(--primary-text-color)] mb-4 text-sm space-y-1">
-                            <li>Developed an <span class="highlight-text">AI-powered career guidance application</span> designed to provide personalized mentorship and career path recommendations.</li>
-                            <li>Utilized <span class="highlight-text">Google's Gemini API</span> for advanced natural language processing and content generation, offering tailored advice based on user input.</li>
-                            <li>Built a <span class="highlight-text">responsive and intuitive user interface with Streamlit</span>, ensuring an engaging and accessible experience for users seeking career insights.</li>
-                            <li>Implemented features for <span class="highlight-text">interactive Q&A sessions</span>, allowing users to delve deeper into specific career aspects and receive instant, relevant guidance.</li>
-                        </ul>
-                        <p class="text-sm font-medium text-[var(--secondary-text-color)] mb-4">
-                            <strong>Tech Stack:</strong> <span class="highlight-text">Python</span>, <span class="highlight-text">Streamlit</span>, <span class="highlight-text">Google Gemini API</span>, <span class="highlight-text">Custom Search API</span>, <span class="highlight-text">YouTube Data API</span>, <span class="highlight-text">ReportLab</span>, <span class="highlight-text">Aiohttp</span>
-                        </p>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/Anushkachakraborty2005/tech-mentor-app" target="_blank" class="text-purple-400 hover:text-purple-200 font-medium flex items-center">
-                                <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.47.087.68-.217.68-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.004.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.392-1.988 1.03-2.69-.104-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.098 2.65.637.702 1.03 1.594 1.03 2.69 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.209.576.685.479C21.133 20.217 24 16.46 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd" /></svg>
-                                GitHub
-                            </a>
-                            <a href="https://tech-mentor-app-k8szevckmur245i22lc4b2.streamlit.app/" target="_blank" class="text-purple-400 hover:text-purple-200 font-medium flex items-center">
-                                <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                Live App
                             </a>
                         </div>
                     </div>
