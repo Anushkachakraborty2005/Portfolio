@@ -5,7 +5,9 @@ This platform showcases my **skills**, **projects**, and **passion** for web dev
 ## 🎥 Live Demo
 
 You can view the live version of this portfolio website here:  
-⏳ [Visit My Portfolio](https://resplendent-pony-dd2f65.netlify.app/)
+⏳ [Visit My Portfolio](https://admirable-mandazi-8279ad.netlify.app/
+
+)
 
 
 --- 
@@ -99,7 +101,7 @@ An AI-driven mentorship platform offering personalized tech career guidance.
 - 🧩 Real-time interactive Q&A sessions for career-related queries.
 
 **🛠️ Tech Stack:** `Python`, `Streamlit`, `Google Gemini API`, `Custom Search API`, `YouTube Data API`, `ReportLab`, `Aiohttp`  
-**🔗 Live Demo:** [TechMentor](https://tech-mentor-app-k8szevckmur245i22lc4b2.streamlit.app/)
+**🔗 Live Demo:** [TechMentor](https://techmentor-app-9ibwtxjsepyxzpsv3skjp5.streamlit.app/)
 
 
 
