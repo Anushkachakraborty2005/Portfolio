@@ -46,7 +46,7 @@ Here's a breakdown of my technical skills:
   Strong grasp of `SQL` for querying and managing relational databases.  
   Experience with `MySQL` for structured data handling and storage.
 
-- 🐍 **Python**  
+- 🅿 **Python**  
   Experienced in Python for:
   - Web apps using `Streamlit`
   - Data analysis using `Pandas`, `NumPy`
@@ -73,8 +73,8 @@ A robust web app that detects and analyzes potentially malicious URLs in real-ti
 - 🕵️ Used **BeautifulSoup4** & `requests` for content scraping and display.
 - 🖥️ Built an intuitive interface using **Streamlit**.
 
-**🛠️ Tech Stack:** `Python`, `Streamlit`, `VirusTotal API`, `Requests`, `BeautifulSoup4`  
-**🔗 Live Demo:** [ThreatFilter](https://threatfilter-url-detector-ccqbgqkascrccmkh7ksssc.streamlit.app/)
+**🎭 Tech Stack:** `Python`, `Streamlit`, `VirusTotal API`, `Requests`, `BeautifulSoup4`  
+**📽 Live Demo:** [ThreatFilter](https://threatfilter-url-detector-ccqbgqkascrccmkh7ksssc.streamlit.app/)
 
 ---
 
@@ -86,7 +86,7 @@ A GUI-based academic record manager for student data.
 - 💾 Data persistence with **MySQL** for backend storage.
 - 🔄 Managed with **Git** for smooth development and collaboration.
 
-**🛠️ Tech Stack:** `Python`, `MySQL`, `Tkinter`
+**🎭 Tech Stack:** `Python`, `MySQL`, `Tkinter`
 
 ---
 
@@ -98,8 +98,8 @@ An AI-driven mentorship platform offering personalized tech career guidance.
 - 📺 Integrated **YouTube Data API**, **Custom Search API**, and PDF generation with **ReportLab**.
 - 🧩 Real-time interactive Q&A sessions for career-related queries.
 
-**🛠️ Tech Stack:** `Python`, `Streamlit`, `Google Gemini API`, `Custom Search API`, `YouTube Data API`, `ReportLab`, `Aiohttp`  
-**🔗 Live Demo:** [TechMentor](https://techmentor-app-9ibwtxjsepyxzpsv3skjp5.streamlit.app/)
+**🎭 Tech Stack:** `Python`, `Streamlit`, `Google Gemini API`, `Custom Search API`, `YouTube Data API`, `ReportLab`, `Aiohttp`  
+**📽 Live Demo:** [TechMentor](https://techmentor-app-9ibwtxjsepyxzpsv3skjp5.streamlit.app/)
 
 
 
@@ -119,4 +119,4 @@ Feel free to reach out for:
 
 **Anushka Chakraborty**  
 🔖 [LinkedIn](https://www.linkedin.com/in/anushka-chakraborty-006881311/)  
-📧 [Email](mailto:anushkachakbotty@gmail.com)
+💌 [Email](mailto:anushkachakbotty@gmail.com)
